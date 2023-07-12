@@ -1,5 +1,5 @@
 
-package panaderia;
+package modelo;
 public class Panaderia {
     private String nombre;
     private String direccion;

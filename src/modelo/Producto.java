@@ -1,4 +1,4 @@
-package panaderia;
+package modelo;
 
 public class Producto {
     private String nombre;
