@@ -8,7 +8,6 @@ public class Vendedor extends Persona{
         super(nombre, apellidos, dni);
         this.login = new Login(usuario, clave);
     }
- 
      
  public boolean validar(String usuario, String clave){
         return this.login.validar(usuario, clave);
@@ -22,8 +21,7 @@ public class Vendedor extends Persona{
     public String toString() {
         return "Vendedor{" + "login=" + login + '}';
     }
-
-  
+    
 }
 
 

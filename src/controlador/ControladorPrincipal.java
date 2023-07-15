@@ -1,22 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import modelo.Usuario;
-import modelo.UsuarioArreglo;
+import modelo.Vendedor;
+import modelo.ArregloPersonas;
 import vista.frmIngreso;
 import vista.frmPrincipal;
 
 public class ControladorPrincipal {
-    Usuario modelo;
+    Vendedor modelo;
     frmPrincipal vista;
 
-    public ControladorPrincipal(Usuario modelo, frmPrincipal vista) {
+    public ControladorPrincipal(Vendedor modelo, frmPrincipal vista) {
         this.modelo = modelo;
         this.vista = vista;
         vista.lblUsuario.setText("Usuario:"+ modelo.getNombre());
@@ -27,7 +23,7 @@ public class ControladorPrincipal {
             public void actionPerformed(ActionEvent e) {
                 frmIngreso fIngreso = new frmIngreso();
                 ControladorLogin controlador = 
-                        new ControladorLogin(configuracion.Datos.usuarios, fIngreso);
+                        new ControladorLogin(configuracion.Datos.vendedores, fIngreso);
                 controlador.iniciar();
                 
                 vista.dispose();

@@ -18,17 +18,20 @@ public class Venta {
         this.fecha = fecha;
     }
   
+  
     
     public double calcularSubtotal() {
         double subtotal = 0;
         
-        for (int i = 0; i < cantidadProductos; i++) {
+        for (int i = 0; i < cantidadProducto; i++) {
             Producto producto = productos[i];
             subtotal += producto.getPrecio();
         }
 
         return subtotal;
     }
+    
+   
 
     public double calcularIGV() {
         double subtotal = calcularSubtotal();

@@ -7,8 +7,9 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import modelo.Usuario;
-import modelo.UsuarioArreglo;
+import modelo.Vendedor;
+import modelo.ArregloPersonas;
+import modelo.Persona;
 import vista.frmIngreso;
 import vista.frmPrincipal;
 
@@ -17,10 +18,10 @@ import vista.frmPrincipal;
  * @author Aulafisi
  */
 public class ControladorLogin {
-    UsuarioArreglo modelo;
+    ArregloPersonas modelo;
     frmIngreso vista;
 
-    public ControladorLogin(UsuarioArreglo modelo, 
+    public ControladorLogin(ArregloPersonas modelo, 
             frmIngreso vista) {
         this.modelo = modelo;
         this.vista = vista;
@@ -34,13 +35,13 @@ public class ControladorLogin {
         this.vista.btnIngresar.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Usuario u = modelo.validar(vista.txtUsuairo.getText(), 
+                Persona u = modelo.validar(vista.txtUsuairo.getText(), 
                             vista.txtClave.getText() );
                 if (u != null){
                     //JOptionPane.showMessageDialog( vista, u );
                     frmPrincipal vistaP = new frmPrincipal();
                     ControladorPrincipal controladorPrincipal = 
-                            new ControladorPrincipal(u, vistaP);
+                            new ControladorPrincipal((Vendedor) u, vistaP);
                     controladorPrincipal.iniciar();
                     vista.dispose();
                     

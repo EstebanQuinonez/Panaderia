@@ -63,8 +63,7 @@ public class ArregloPersonas {
         for( Persona p : this.personas){
             if(p!= null){
                 resultado += p+"\n";
-            }
-            
+            }        
         }
         return resultado;
             

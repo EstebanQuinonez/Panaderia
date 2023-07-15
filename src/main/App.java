@@ -32,17 +32,19 @@ public class App {
       
   
         // Realizar una venta (lo que me pida el cliente)
+       /*
         Venta venta = new Venta(cliente);
         venta.agregarProducto(pan, 2);
         venta.agregarProducto(torta, 1);
         venta.agregarProducto(galletas, 3);
         venta.agregarProducto(leche, 2);
+*/
 
         // Generar la boleta
-        String boleta = venta.generarBoleta();
+      //  String boleta = venta.generarBoleta();
 
         // Imprimir la boleta
-        System.out.println(boleta);
+      //  System.out.println(boleta);
 }
     
     
