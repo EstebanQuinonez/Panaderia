@@ -28,19 +28,22 @@ public class frmPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         btnSalir1 = new javax.swing.JButton();
+        panControles = new javax.swing.JPanel();
+        btnPerfil = new javax.swing.JButton();
+        btnVentas = new javax.swing.JButton();
         panTitulo = new javax.swing.JPanel();
         lbltitulo = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
-        panControles = new javax.swing.JPanel();
-        btnPerfil = new javax.swing.JButton();
-        btnUsuarios = new javax.swing.JButton();
-        btnVentas = new javax.swing.JButton();
-        btnReportes = new javax.swing.JButton();
+        lbltitulo1 = new javax.swing.JLabel();
 
         btnSalir1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salir.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/perfil.jpg"))); // NOI18N
+
+        btnVentas.setText("Ventas");
 
         lbltitulo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lbltitulo.setText("SISTEMA DE CONTROL ADMINISTRAIVO");
@@ -49,71 +52,67 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salir.jpg"))); // NOI18N
 
+        lbltitulo1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbltitulo1.setText("PANADERÍA MÁSTER");
+
         javax.swing.GroupLayout panTituloLayout = new javax.swing.GroupLayout(panTitulo);
         panTitulo.setLayout(panTituloLayout);
         panTituloLayout.setHorizontalGroup(
             panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panTituloLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
-                .addGroup(panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbltitulo, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panTituloLayout.createSequentialGroup()
+                .addGroup(panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbltitulo)
+                    .addGroup(panTituloLayout.createSequentialGroup()
                         .addComponent(lblUsuario)
                         .addGap(165, 165, 165)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(panTituloLayout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(lbltitulo1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panTituloLayout.setVerticalGroup(
             panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panTituloLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(14, 14, 14)
+                .addComponent(lbltitulo1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panTituloLayout.createSequentialGroup()
                         .addComponent(lbltitulo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblUsuario)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
-
-        getContentPane().add(panTitulo, java.awt.BorderLayout.NORTH);
-
-        btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/perfil.jpg"))); // NOI18N
-
-        btnUsuarios.setText("Usuarios");
-
-        btnVentas.setText("Ventas");
-
-        btnReportes.setText("Reportes");
 
         javax.swing.GroupLayout panControlesLayout = new javax.swing.GroupLayout(panControles);
         panControles.setLayout(panControlesLayout);
         panControlesLayout.setHorizontalGroup(
             panControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panControlesLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(panControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(79, 79, 79)
-                .addGroup(panControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addGap(62, 62, 62)
+                .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panControlesLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(panTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panControlesLayout.setVerticalGroup(
             panControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panControlesLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap()
+                .addComponent(panTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(panControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         getContentPane().add(panControles, java.awt.BorderLayout.CENTER);
@@ -158,13 +157,12 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnPerfil;
-    public javax.swing.JButton btnReportes;
     public javax.swing.JButton btnSalir;
     public javax.swing.JButton btnSalir1;
-    private javax.swing.JButton btnUsuarios;
     public javax.swing.JButton btnVentas;
     public javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lbltitulo;
+    private javax.swing.JLabel lbltitulo1;
     private javax.swing.JPanel panControles;
     private javax.swing.JPanel panTitulo;
     // End of variables declaration//GEN-END:variables

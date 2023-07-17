@@ -21,6 +21,7 @@ public class frmIngreso extends javax.swing.JFrame {
 
         panTitulo = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
+        lblTitulo1 = new javax.swing.JLabel();
         panControles = new javax.swing.JPanel();
         lblUsuario = new javax.swing.JLabel();
         lblClave = new javax.swing.JLabel();
@@ -36,21 +37,29 @@ public class frmIngreso extends javax.swing.JFrame {
         lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitulo.setText("INGRESO AL SISTEMA");
 
+        lblTitulo1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblTitulo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitulo1.setText("PANADERÍA MÁSTER");
+
         javax.swing.GroupLayout panTituloLayout = new javax.swing.GroupLayout(panTitulo);
         panTitulo.setLayout(panTituloLayout);
         panTituloLayout.setHorizontalGroup(
             panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panTituloLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                .addGroup(panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addComponent(lblTitulo1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panTituloLayout.setVerticalGroup(
             panTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panTituloLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addContainerGap()
+                .addComponent(lblTitulo1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblTitulo)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(panTitulo, java.awt.BorderLayout.NORTH);
@@ -165,6 +174,7 @@ public class frmIngreso extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblClave;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTitulo1;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JPanel panControles;
     private javax.swing.JPanel panTitulo;
