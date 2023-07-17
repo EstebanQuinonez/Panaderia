@@ -25,6 +25,5 @@ public class ArregloProductos {
         return this.productos.length == indice;
     }     
 
-
-
+    
 }

@@ -24,17 +24,7 @@ public class ArregloPersonas {
         return this.personas.length == indice;
     }
     
-    public Cliente[] getCliente(){
-        Cliente resultado[] = null;       
-        return resultado;
-    }
-
-    public Vendedor[] getVendedor(){
-        Vendedor resultado[] = null;    
-        return resultado;
-    }    
-    
-    public Persona getPersona( String dni){
+    public Persona getPersona(String dni){
         Persona resultado = null;
         for( Persona p : this.personas){
             if(p.getDni().equalsIgnoreCase(dni)){
@@ -45,18 +35,32 @@ public class ArregloPersonas {
         return resultado;
     }
 
-    public Persona validar(String usuario, String clave){
-        Persona resultado = null;
-         for(Persona u : this.personas){
-             if(u != null && u.validar(usuario, clave)){
-                 resultado = u;
-                 break;
-             }
-         } 
+    
+     public Vendedor[] getVendedor(){
+        Vendedor resultado[] = null;
+        int i=0;
+         for( Persona p : this.personas){
+            if(p instanceof Vendedor){
+                resultado[i] = (Vendedor) p;
+                i++; 
+            }
+        }    
         return resultado;
+    } 
+     
+    public Vendedor validar(String usuario, String clave){
+           Vendedor resultado = null;
+            for(Vendedor u : getVendedor()){
+                if(u != null && u.validar(usuario, clave)){
+                    resultado = u;
+                    break;
+                }        
+            }
+              return resultado;
     }
-    
-    
+
+         
+        
     @Override
     public String toString() {
         String resultado = "";
@@ -68,5 +72,6 @@ public class ArregloPersonas {
         return resultado;
             
     }
+
     
 }

@@ -32,8 +32,11 @@ public class Persona {
         return this.dni ;
     }
 
-    boolean validar(String usuario, String clave) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Override
+    public String toString() {
+        return "\n Nombre=" + nombre + "\n apellidos=" + apellidos + "\n dni=" + dni + '}';
     }
+
+    
    
 }

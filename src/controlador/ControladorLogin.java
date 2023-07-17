@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package controlador;
 
 import java.awt.event.ActionEvent;
@@ -11,12 +8,7 @@ import modelo.Vendedor;
 import modelo.ArregloPersonas;
 import modelo.Persona;
 import vista.frmIngreso;
-import vista.frmPrincipal;
 
-/**
- *
- * @author Aulafisi
- */
 public class ControladorLogin {
     ArregloPersonas modelo;
     frmIngreso vista;
@@ -35,17 +27,10 @@ public class ControladorLogin {
         this.vista.btnIngresar.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Persona u = modelo.validar(vista.txtUsuairo.getText(), 
+                Vendedor u = modelo.validar(vista.txtUsuairo.getText(), 
                             vista.txtClave.getText() );
                 if (u != null){
-                    //JOptionPane.showMessageDialog( vista, u );
-                    frmPrincipal vistaP = new frmPrincipal();
-                    ControladorPrincipal controladorPrincipal = 
-                            new ControladorPrincipal((Vendedor) u, vistaP);
-                    controladorPrincipal.iniciar();
-                    vista.dispose();
-                    
-                    
+                    JOptionPane.showMessageDialog( vista, u );
                 } else {
                     JOptionPane.showMessageDialog( vista, "Credenciales invalidas" );
                 }

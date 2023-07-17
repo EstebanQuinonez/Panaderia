@@ -5,6 +5,6 @@ import modelo.ArregloPersonas;
 
 
 public class Datos {
-        public static ArregloPersonas vendedores = new ArregloPersonas(10);
+     //   public static ArregloPersonas vendedores = new ArregloPersonas(100);
 
 }
