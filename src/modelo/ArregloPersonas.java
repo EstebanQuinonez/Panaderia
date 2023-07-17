@@ -37,9 +37,9 @@ public class ArregloPersonas {
 
     
      public Vendedor[] getVendedor(){
-        Vendedor resultado[] = null;
+        Vendedor resultado[] = new Vendedor[100];//Vendedor resultado[] = null;
         int i=0;
-         for( Persona p : this.personas){
+        for( Persona p : this.personas){
             if(p instanceof Vendedor){
                 resultado[i] = (Vendedor) p;
                 i++; 

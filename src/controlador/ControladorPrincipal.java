@@ -11,7 +11,7 @@ import vista.frmPrincipal;
 public class ControladorPrincipal {
     Vendedor modelo;
     frmPrincipal vista;
-/*
+    
     public ControladorPrincipal(Vendedor modelo, frmPrincipal vista) {
         this.modelo = modelo;
         this.vista = vista;
@@ -38,5 +38,4 @@ public class ControladorPrincipal {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
     }
-*/
 }

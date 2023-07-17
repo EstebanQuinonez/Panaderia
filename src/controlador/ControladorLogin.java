@@ -8,6 +8,7 @@ import modelo.Vendedor;
 import modelo.ArregloPersonas;
 import modelo.Persona;
 import vista.frmIngreso;
+import vista.frmPrincipal;
 
 public class ControladorLogin {
     ArregloPersonas modelo;
@@ -30,7 +31,12 @@ public class ControladorLogin {
                 Vendedor u = modelo.validar(vista.txtUsuairo.getText(), 
                             vista.txtClave.getText() );
                 if (u != null){
-                    JOptionPane.showMessageDialog( vista, u );
+                    frmPrincipal vistaP = new frmPrincipal();
+                    ControladorPrincipal controladorPrincipal =
+                            new ControladorPrincipal(u,vistaP);
+                    controladorPrincipal.iniciar();
+                    vista.dispose();
+                    //JOptionPane.showMessageDialog( vista, u );
                 } else {
                     JOptionPane.showMessageDialog( vista, "Credenciales invalidas" );
                 }

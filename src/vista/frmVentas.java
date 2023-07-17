@@ -519,8 +519,8 @@ public class frmVentas extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMostrar;
-    private javax.swing.JButton btnRegistar;
+    public javax.swing.JButton btnMostrar;
+    public javax.swing.JButton btnRegistar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -538,12 +538,12 @@ public class frmVentas extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel lbltitulo1;
     private javax.swing.JTable tblVentas;
-    private javax.swing.JTextField txtApellidos;
-    private javax.swing.JTextField txtCantProduct;
-    private javax.swing.JTextField txtCodProduct;
-    private javax.swing.JTextField txtDni;
-    private javax.swing.JTextField txtNom;
-    private javax.swing.JTextField txtNomProduct;
-    private javax.swing.JTextField txtPagoTotal;
+    public javax.swing.JTextField txtApellidos;
+    public javax.swing.JTextField txtCantProduct;
+    public javax.swing.JTextField txtCodProduct;
+    public javax.swing.JTextField txtDni;
+    public javax.swing.JTextField txtNom;
+    public javax.swing.JTextField txtNomProduct;
+    public javax.swing.JTextField txtPagoTotal;
     // End of variables declaration//GEN-END:variables
 }
