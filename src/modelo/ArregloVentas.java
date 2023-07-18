@@ -9,7 +9,11 @@ public class ArregloVentas {
         this.ventas = new Venta [tamano];
         this.indice = 0;
      }     
+
+    public ArregloVentas() {
+    }
          
+     
        public boolean agregar(Venta venta){
         boolean resultado = false;
         if(!lleno()){

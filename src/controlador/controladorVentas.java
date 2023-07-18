@@ -4,21 +4,23 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import modelo.ArregloVentas;
 import modelo.Persona;
 import modelo.Venta;
 import vista.frmVentas;
+import modelo.ArregloPersonas;
 
 
-public class controladorVentas {
+public class controladorVentas implements ActionListener{
   
-    Venta venta;
+    ArregloVentas ventas;
     frmVentas fmrV;
+    ArregloPersonas personas = new ArregloPersonas(100);
 
-    /*
     
     public controladorVentas() {
-        this.venta = new Venta();
-        this.fmrV = new frmVentas();
+      this.ventas = new ArregloVentas();
+      this.fmrV = new frmVentas();
     }
 
     public void iniciar(){
@@ -30,18 +32,18 @@ public class controladorVentas {
  
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent ae) {
             if(ae.getSource().equals(fmrV.getBtnRegistar())){
                 Persona objP = new Persona(
                 fmrV.getTxtNom().getText(),
                 fmrV.getTxtApellidos().getText(),
                 fmrV.getTxtDni().getText()
                 );
-              venta.getListaC().add(objP);
+               personas.agregar(objP);
                 JOptionPane.showMessageDialog(fmrV, "Datos registrados..\n"+objP.toString());
             }
-    }
+    }    
 
-    */
+
     
 }
